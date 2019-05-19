@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+body {
+    background-color:#1A1A1D ;
+color:white;
+}
+.zoi {
+  float: right;
+}
+.search-box{
+  display: flex;
+  margin:1px ;
+  font-family: cursive;
+  font-size: 18px;
+  max-width: 300px;
+  min-width: 100px;
+  height: 40px;
+}
+.textbox
+{ 
+min-width: 80%; 
+border: 1px solid rgb(238, 192, 192); 
+}
+button{
+  display: inline-flex;
+  border: none;
+  background: #42afe3;
+  color: #fff;
+  padding: 0 10px;
+  border-radius: 0 3px 3px 0;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: 600;
+  border: 3px solid #42afe3;
+  font-size: 14px;
+  cursor: pointer;
+}
+.icon{
+  display: inline-block;
+  background: url('https://www.google.com.au/images/nav_logo242.png') no-repeat -107px -55px;
+  width: 24px;
+  height: 24px;
+  margin: 0 auto;
+}
+input[type=text]{
+  width: 80%;
+  border: 0;
+  padding: 10px 15px;
+  font-family: Roboto;
+  font-size: 18px;
+  font-weight:800 ;
+  outline: none;
+  background: transparent;
+}
+
+
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color:#1A1A1D;
+  min-width: 300px;
+  overflow: auto;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: white;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+.dropdown a:hover 
+{
+background-color: #ddd;
+}
+.show {
+display: block;
+}
+table,th, td {
+    border: 1px solid white;
+  padding:22px;
+}
+table {
+  border-collapse: collapse;
+  width:50%;
+}
+th{
+  height:60px;
+  text-align:center;
+}
+h1.tab{
+background-color: #14A76C;
+    color: white;
+    padding: 10px 500px;
+    text-align: center;	
+    text-decoration: none;
+    display: inline-block;
+    margin-bottom:1%;
+}
+
+.hello a:link, a:visited 
+{
+    background-color: #F13C20;
+    color: white;
+    padding: 19px 342px;
+    text-align: center;	
+    text-decoration: none;
+    display: inline-block;
+margin-top:1%;
+border-radius:50px;
+font-size:30px;
+font-weight: bold;
+text-shadow:1px 1px blue;
+}
+.hello a:hover, a:active {
+    background-color:#7E685A;
+}
+
+</style>
+</head>
+<body>
+<div class="zoi">
+<div class="search-box">           
+<div class="textbox">
+<input type="text" onclick="myFunction()" class="dropbtn"  placeholder="Search..">
+</div>
+  <button class="search-button">
+              <span class="icon"></span>
+            </button>
+</div>
+ <div id="myDropdown" class="dropdown-content">
+ <a href="index.html">NAME</a>
+    <a href="page1.html">ACADEMIC DETAILS</a>
+    <a href="page2.html">PROJECT AND ACTIVITY</a>
+    <a href="page3.html">INTEREST</a>
+    <a href="page4.html">CONTACT DETAILS</a>
+    <a href="page5.html">ADDRESS</a>
+    <a href="page6.html">PERSONAL PROFILE</a>   
+<script>
+function myFunction() {
+  document.getElementById("myDropdown").classList.toggle("show");
+}
+window.onclick = function(event) {
+if (!event.target.matches('.dropbtn'))
+   {
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+}
+</script>
+ 
+
+        </div>
+</div>
+<div>
+<h1 class="tab">ACADEMIC DETAILS</h1>
+<table style="width:100%">
+            <tr>
+                <th>NAME OF THE COURSE</th>
+                <th>NAME OF THE INSTITUTION</th>
+                <th>DURATION OF STUDY</th>
+                <th>PERSENTAGE OF MARKS</th>
+            </tr>
+
+            <tr>
+                <th>BE-COMPUTER SCIENCE AND ENGINEERING</th>
+                <th>PARISUTHAM INSTITUTE OF TECHNOLOGY AND SCIENCE,THANJAVUR</th>
+                <th>2013-2017</th>
+                <th>70%</th>
+            </tr>
+
+            <tr>
+                <th>H.S.C.,</th>
+                <th>GOVERNMENT GIRLS HIGHER SECONDARY SCHOOL,ORATHANAD</th>
+                <th>2012-2013</th>
+                <th>76.3%</th>
+            </tr>
+            
+            <tr>
+                <th>S,S,L,C</th>
+                <th>GOVERNMENT GIRLS HIGHER SECONDARY SCHOOL,ORATHANAD</th>
+                <th>2010-2011</th>
+                <th>88%</th>
+            </tr>
+
+</table>
+<div class="hello">
+<a href="page2.html">CLICK HERE ABOUT MY PROJECT DETAILS</a>
+</div>
+</body>
+</html>
